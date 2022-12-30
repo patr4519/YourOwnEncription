@@ -71,6 +71,34 @@ table {
     width: 20px;
     text-align: center;
 }
+
 .generateButton {
-    margin-left: 580px;
+    margin-left: 550px;
+}
+
+textarea {
+    resize: none;
+}
+
+.inputs {
+    margin: 20px auto;
+    width: 800px;
+    height: 130px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.yourText {
+    width: 50%;
+}
+
+.encriptedText {
+    width: 50%;
+}
+
+.caesarCipher {
+    margin-left: 290px;
+}
+.translateButton {
+    margin-left: 570px;
 }

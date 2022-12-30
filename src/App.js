@@ -16,33 +16,36 @@ function App() {
 }
 
 function Main() {
-  const [a, setA] = React.useState('?');
-  const [b, setB] = React.useState('?');
-  const [c, setC] = React.useState('?');
-  const [d, setD] = React.useState('?');
-  const [e, setE] = React.useState('?');
-  const [f, setF] = React.useState('?');
-  const [g, setG] = React.useState('?');
-  const [h, setH] = React.useState('?');
-  const [i, setI] = React.useState('?');
-  const [j, setJ] = React.useState('?');
-  const [k, setK] = React.useState('?');
-  const [l, setL] = React.useState('?');
-  const [m, setM] = React.useState('?');
-  const [n, setN] = React.useState('?');
-  const [o, setO] = React.useState('?');
-  const [p, setP] = React.useState('?');
-  const [q, setQ] = React.useState('?');
-  const [r, setR] = React.useState('?');
-  const [s, setS] = React.useState('?');
-  const [t, setT] = React.useState('?');
-  const [u, setU] = React.useState('?');
-  const [v, setV] = React.useState('?');
-  const [w, setW] = React.useState('?');
-  const [x, setX] = React.useState('?');
-  const [y, setY] = React.useState('?');
-  const [z, setZ] = React.useState('?');
-  const [cipher, setCipher] = React.useState(null)
+  const [a, setA] = React.useState('');
+  const [b, setB] = React.useState('');
+  const [c, setC] = React.useState('');
+  const [d, setD] = React.useState('');
+  const [e, setE] = React.useState('');
+  const [f, setF] = React.useState('');
+  const [g, setG] = React.useState('');
+  const [h, setH] = React.useState('');
+  const [i, setI] = React.useState('');
+  const [j, setJ] = React.useState('');
+  const [k, setK] = React.useState('');
+  const [l, setL] = React.useState('');
+  const [m, setM] = React.useState('');
+  const [n, setN] = React.useState('');
+  const [o, setO] = React.useState('');
+  const [p, setP] = React.useState('');
+  const [q, setQ] = React.useState('');
+  const [r, setR] = React.useState('');
+  const [s, setS] = React.useState('');
+  const [t, setT] = React.useState('');
+  const [u, setU] = React.useState('');
+  const [v, setV] = React.useState('');
+  const [w, setW] = React.useState('');
+  const [x, setX] = React.useState('');
+  const [y, setY] = React.useState('');
+  const [z, setZ] = React.useState('');
+
+  const [cipher, setCipher] = React.useState(null);
+  const [normalText, setNormalText] = React.useState(null);
+  const [encriptedText, setEncriptedText] = React.useState(null);
 
   const generate = () => {
     setCipher({
@@ -57,6 +60,24 @@ function Main() {
       y: y, z: z
     });
     alert('Cipher is generated')
+  }
+
+  const putCaesarCipher = () => {
+    setCipher({
+      a: 'x', b: 'y', c: 'z',
+      d: 'a', e: 'b', f: 'c',
+      g: 'd', h: 'e', i: 'f',
+      j: 'g', k: 'h', l: 'i',
+      m: 'j', n: 'k', o: 'l',
+      p: 'm', q: 'n', r: 'o',
+      s: 'p', t: 'q', u: 'r',
+      v: 's', w: 't', x: 'u',
+      y: 'v', z: 'w', [' ']: ' '
+    });
+  }
+
+  const translate = () => {
+    setEncriptedText(toCipher(cipher, normalText))
   }
 
   return (
@@ -122,6 +143,12 @@ function Main() {
         </tbody>
       </table>
       <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
+      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Caesar cypher</button>
+      <div className='inputs'>
+        <textarea className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
+        <textarea className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
+      </div>
+      <button type='button' className='translateButton' onClick={translate}>Translate</button>
     </div>
   );
 }
