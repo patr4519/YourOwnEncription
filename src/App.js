@@ -49,7 +49,7 @@ function Main() {
   const [excMark, setExcMark] = React.useState('')
 
   const [cipher, setCipher] = React.useState(null);
-  const [normalText, setNormalText] = React.useState(null);
+  const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
 
   const generate = () => {
@@ -99,9 +99,15 @@ function Main() {
     });
   }
 
-  const translate = () => {
+  const translateTo = () => {
     setEncriptedText(toCipher(cipher, normalText))
   }
+
+  const translateFrom = () => {
+    setNormalText(fromCipher(cipher, encriptedText))
+  }
+
+  console.log('qeb nrfzh yoltk clu grgmp lsbo qeb ixwv ald'.toUpperCase());
 
   return (
     <div className='main'>
@@ -178,8 +184,9 @@ function Main() {
       <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
       <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cypher</button>
       <div className='inputs'>
-        <textarea className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
-        <button type='button' className='translateButton' onClick={translate}>Translate</button>
+        <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
+        <button type='button' className='translateButton' onClick={translateTo}>Translate to</button>
+        <button type='button' className='translateButton' onClick={translateFrom}>Translate from</button>
         <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
       </div>
     </div>

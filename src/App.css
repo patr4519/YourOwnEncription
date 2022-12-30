@@ -96,13 +96,18 @@ textarea {
 }
 
 .caesarCipher {
-    margin-left: 275px;
+    margin-left: 340px;
 }
+
 .translateButton {
-    margin-left: 570px;
+    width: 100px;
     height: fit-content;
     margin-top: 50px;
     padding: 5px;
     margin-left: 5px;
     margin-right: 5px;
-  }
+}
+
+.subTitle {
+    padding: 10px;
+}
