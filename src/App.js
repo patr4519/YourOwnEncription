@@ -42,10 +42,15 @@ function Main() {
   const [x, setX] = React.useState('');
   const [y, setY] = React.useState('');
   const [z, setZ] = React.useState('');
+  const [space, setSpace] = React.useState(' ');
+  const [dot, setDot] = React.useState('');
+  const [comma, setComma] = React.useState('');
+  const [question, setQuestion] = React.useState('')
+  const [excMark, setExcMark] = React.useState('')
 
   const [cipher, setCipher] = React.useState(null);
   const [normalText, setNormalText] = React.useState(null);
-  const [encriptedText, setEncriptedText] = React.useState(null);
+  const [encriptedText, setEncriptedText] = React.useState('');
 
   const generate = () => {
     setCipher({
@@ -57,22 +62,40 @@ function Main() {
       p: p, q: q, r: r,
       s: s, t: t, u: u,
       v: v, w: w, x: x,
-      y: y, z: z
+      y: y, z: z, [' ']: space,
+      ['.']: dot, [',']: comma,
+      ['?']: question, ['!']: excMark
     });
-    alert('Cipher is generated')
   }
 
   const putCaesarCipher = () => {
-    setCipher({
-      a: 'x', b: 'y', c: 'z',
-      d: 'a', e: 'b', f: 'c',
-      g: 'd', h: 'e', i: 'f',
-      j: 'g', k: 'h', l: 'i',
-      m: 'j', n: 'k', o: 'l',
-      p: 'm', q: 'n', r: 'o',
-      s: 'p', t: 'q', u: 'r',
-      v: 's', w: 't', x: 'u',
-      y: 'v', z: 'w', [' ']: ' '
+    setCipher(() => {
+      setA('x');
+      setB('y');
+      setC('z');
+      setD('a');
+      setE('b');
+      setF('c');
+      setG('d');
+      setH('e');
+      setI('f');
+      setJ('g');
+      setK('h');
+      setL('i');
+      setM('g');
+      setN('k');
+      setO('l');
+      setP('m');
+      setQ('n');
+      setR('o');
+      setS('p');
+      setT('q');
+      setU('r');
+      setV('s');
+      setW('t');
+      setX('u');
+      setY('v');
+      setZ('w');
     });
   }
 
@@ -111,6 +134,11 @@ function Main() {
             <th>X</th>
             <th>Y</th>
             <th>Z</th>
+            <th> </th>
+            <th>.</th>
+            <th>,</th>
+            <th>?</th>
+            <th>!</th>
           </tr>
           <tr>
             <td><input value={a} className='inputChar' onChange={(event) => setA(event.target.value)} /></td>
@@ -139,16 +167,21 @@ function Main() {
             <td><input value={x} className='inputChar' onChange={(event) => setX(event.target.value)} /></td>
             <td><input value={y} className='inputChar' onChange={(event) => setY(event.target.value)} /></td>
             <td><input value={z} className='inputChar' onChange={(event) => setZ(event.target.value)} /></td>
+            <td><input value={space} className='inputChar' onChange={(event) => setSpace(event.target.value)} /></td>
+            <td><input value={dot} className='inputChar' onChange={(event) => setDot(event.target.value)} /></td>
+            <td><input value={comma} className='inputChar' onChange={(event) => setComma(event.target.value)} /></td>
+            <td><input value={question} className='inputChar' onChange={(event) => setQuestion(event.target.value)} /></td>
+            <td><input value={excMark} className='inputChar' onChange={(event) => setExcMark(event.target.value)} /></td>
           </tr>
         </tbody>
       </table>
       <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
-      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Caesar cypher</button>
+      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cypher</button>
       <div className='inputs'>
         <textarea className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
-        <textarea className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
+        <button type='button' className='translateButton' onClick={translate}>Translate</button>
+        <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
       </div>
-      <button type='button' className='translateButton' onClick={translate}>Translate</button>
     </div>
   );
 }
