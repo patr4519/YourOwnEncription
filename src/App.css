@@ -1,0 +1,76 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0px 0px;
+    background-image: url(img/background.png);
+    background-color: antiquewhite;
+    position: relative;
+}
+
+header {
+    width: 1200px;
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    background-image: url(img/bg-body.jpg);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1200px;
+    height: 50px;
+    background-color: rgb(94, 86, 86);
+}
+
+.main {
+    position: relative;
+    background-image: url(img/bg-body.jpg);
+    margin: auto;
+    padding-top: 1px;
+    background-color: rgba(164, 137, 129, 0.57);
+    width: 1200px;
+    height: 1100px;
+}
+
+.name {
+    padding-left: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+.myLink>a {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    line-height: 50px;
+    color: white;
+}
+
+.myLink>a:hover {
+    background-color: #2a5a5a57;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+table {
+    width: 70%;
+}
+
+.inputChar {
+    width: 20px;
+    text-align: center;
+}
+.generateButton {
+    margin-left: 580px;
+}
