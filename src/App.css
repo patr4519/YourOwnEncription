@@ -99,6 +99,10 @@ textarea {
     top: 115px;
     left: 295px;
 }
+.closeNormalText:hover {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
 .closeEncriptedText {
     width: 11px;
     height: 11px;
