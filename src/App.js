@@ -4,7 +4,8 @@ import { Nav } from './elements/Nav';
 import { Header } from './elements/Header';
 import { fromCipher } from './functions/fromCipher';
 import { toCipher } from './functions/toCipher';
-import closeIMG from './img/close.png'
+import closeIMG from './img/close.png';
+import copyIMG from './img/copyButton.png'
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function Main() {
   const [cipher, setCipher] = React.useState(null);
   const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
+  const [mainBlock, setMainBlock] = React.useState(false);
 
   const generate = () => {
     setCipher({
@@ -67,6 +69,7 @@ function Main() {
       ['.']: dot, [',']: comma,
       ['?']: question, ['!']: excMark
     });
+    setMainBlock(true);
   }
 
   const putCaesarCipher = () => {
@@ -112,6 +115,10 @@ function Main() {
     setNormalText('');
     setEncriptedText('');
   }
+
+  // const copyNormalText = () => {
+    
+  // }
 
   return (
     <div className='main'>
@@ -189,13 +196,15 @@ function Main() {
       <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cypher</button>
       <div className='inputs'>
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
-        <div className='mainBlock'>
+        <div className={`mainBlock ${mainBlock ? 'show' : 'hidden'}`}>
           <button type='button' className='translateButton' onClick={translateTo}>Translate to</button>
           <button type='button' className='translateButton' onClick={translateFrom}>Translate from</button>
           <button type='button' className='clearInputs' onClick={clearInputs}>Clear</button>
         </div>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
         <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
+        <img src={copyIMG} alt='copy' className='copyNormalText' onClick={copyNormalText}></img>
+        <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
         <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
         <p className='pNormal'>Normal text</p>
         <p className='pEncripted'>Encripted text</p>

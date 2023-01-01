@@ -101,6 +101,13 @@ textarea {
     width: 30%;
 }
 
+.show {
+    visibility: '';
+}
+.hidden {
+    visibility: hidden;
+}
+
 .closeNormalText {
     width: 11px;
     height: 11px;
@@ -127,6 +134,22 @@ textarea {
 .closeEncriptedText:hover {
     background-color: rgb(213, 210, 207);
     border-radius: 5px;
+}
+
+.copyNormalText {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 108px;
+    left: 1px;
+}
+
+.copyEncriptedText {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 108px;
+    right: 261px;
 }
 
 .caesarCipher {
