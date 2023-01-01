@@ -4,6 +4,7 @@ import { Nav } from './elements/Nav';
 import { Header } from './elements/Header';
 import { fromCipher } from './functions/fromCipher';
 import { toCipher } from './functions/toCipher';
+import closeIMG from './img/close.png'
 
 function App() {
   return (
@@ -185,6 +186,8 @@ function Main() {
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <button type='button' className='translateButton' onClick={translateTo}>Translate to</button>
         <button type='button' className='translateButton' onClick={translateFrom}>Translate from</button>
+        <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
+        <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
         <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
       </div>
     </div>

@@ -85,10 +85,26 @@ textarea {
     width: 800px;
     height: 130px;
     display: flex;
+    position: relative;
 }
 
 .yourText {
     width: 50%;
+    position: relative;
+}
+.closeNormalText {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 115px;
+    left: 295px;
+}
+.closeEncriptedText {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 115px;
+    right: 5px;
 }
 
 .encriptedText {
