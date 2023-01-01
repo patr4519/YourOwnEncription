@@ -45,8 +45,8 @@ function Main() {
   const [space, setSpace] = React.useState(' ');
   const [dot, setDot] = React.useState('');
   const [comma, setComma] = React.useState('');
-  const [question, setQuestion] = React.useState('')
-  const [excMark, setExcMark] = React.useState('')
+  const [question, setQuestion] = React.useState('');
+  const [excMark, setExcMark] = React.useState('');
 
   const [cipher, setCipher] = React.useState(null);
   const [normalText, setNormalText] = React.useState('');
@@ -82,7 +82,7 @@ function Main() {
       setJ('g');
       setK('h');
       setL('i');
-      setM('g');
+      setM('j');
       setN('k');
       setO('l');
       setP('m');
@@ -106,8 +106,6 @@ function Main() {
   const translateFrom = () => {
     setNormalText(fromCipher(cipher, encriptedText))
   }
-
-  console.log('qeb nrfzh yoltk clu grgmp lsbo qeb ixwv ald'.toUpperCase());
 
   return (
     <div className='main'>
