@@ -89,8 +89,16 @@ textarea {
 }
 
 .yourText {
-    width: 50%;
+    width: 35%;
     position: relative;
+}
+
+.encriptedText {
+    width: 35%;
+}
+
+.mainBlock {
+    width: 30%;
 }
 
 .closeNormalText {
@@ -99,7 +107,7 @@ textarea {
     padding: 3px;
     position: absolute;
     top: 110px;
-    left: 290px;
+    left: 262px;
 }
 
 .closeNormalText:hover {
@@ -121,21 +129,17 @@ textarea {
     border-radius: 5px;
 }
 
-.encriptedText {
-    width: 50%;
-}
-
 .caesarCipher {
     margin-left: 340px;
 }
 
 .translateButton {
     width: 100px;
+    height: -moz-fit-content;
     height: fit-content;
     margin-top: 30px;
     padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 11px;
 }
 
 .subTitle {
@@ -163,6 +167,6 @@ textarea {
 .clearInputs {
     position: absolute;
     width: 100px;
-    top: 80px;
+    top: 70px;
     left: 350px;
 }
