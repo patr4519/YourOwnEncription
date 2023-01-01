@@ -81,7 +81,7 @@ textarea {
 }
 
 .inputs {
-    margin: 20px auto;
+    margin: 35px auto;
     width: 800px;
     height: 130px;
     display: flex;
@@ -92,23 +92,33 @@ textarea {
     width: 50%;
     position: relative;
 }
+
 .closeNormalText {
     width: 11px;
     height: 11px;
+    padding: 3px;
     position: absolute;
-    top: 115px;
-    left: 295px;
+    top: 110px;
+    left: 290px;
 }
+
 .closeNormalText:hover {
-    background-color: antiquewhite;
-    border-radius: 10px;
+    background-color: rgb(213, 210, 207);
+    border-radius: 5px;
 }
+
 .closeEncriptedText {
     width: 11px;
     height: 11px;
+    padding: 3px;
     position: absolute;
-    top: 115px;
+    top: 110px;
     right: 5px;
+}
+
+.closeEncriptedText:hover {
+    background-color: rgb(213, 210, 207);
+    border-radius: 5px;
 }
 
 .encriptedText {
@@ -122,7 +132,7 @@ textarea {
 .translateButton {
     width: 100px;
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -130,4 +140,29 @@ textarea {
 
 .subTitle {
     padding: 10px;
+}
+
+.pNormal {
+    position: absolute;
+    top: -27px;
+    left: 107px;
+    font-size: 12px;
+    font-style: italic;
+    color: grey;
+}
+
+.pEncripted {
+    position: absolute;
+    top: -27px;
+    right: 107px;
+    font-size: 12px;
+    font-style: italic;
+    color: grey;
+}
+
+.clearInputs {
+    position: absolute;
+    width: 100px;
+    top: 80px;
+    left: 350px;
 }

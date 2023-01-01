@@ -108,6 +108,11 @@ function Main() {
     setNormalText(fromCipher(cipher, encriptedText))
   }
 
+  const clearInputs = () => {
+    setNormalText('');
+    setEncriptedText('');
+  }
+
   return (
     <div className='main'>
       <table>
@@ -186,9 +191,12 @@ function Main() {
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <button type='button' className='translateButton' onClick={translateTo}>Translate to</button>
         <button type='button' className='translateButton' onClick={translateFrom}>Translate from</button>
+        <button type='button' className='clearInputs' onClick={clearInputs}>Clear</button>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
         <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
         <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
+        <p className='pNormal'>Normal text</p>
+        <p className='pEncripted'>Encripted text</p>
       </div>
     </div>
   );
