@@ -203,7 +203,7 @@ function Main() {
         </div>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
         <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
-        <img src={copyIMG} alt='copy' className='copyNormalText' onClick={copyNormalText}></img>
+        <img src={copyIMG} alt='copy' className='copyNormalText'></img>
         <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
         <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
         <p className='pNormal'>Normal text</p>
