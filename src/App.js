@@ -294,7 +294,7 @@ function Main() {
         <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
         <img src={copyIMG} alt='copy' className='copyNormalText'></img>
         <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
-        <textarea value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
+        <textarea spellcheck='false' value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
         <p className='pNormal'>Normal text</p>
         <p className='pEncripted'>Encripted text</p>
       </div>
