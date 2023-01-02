@@ -257,3 +257,18 @@ textarea {
 .clearCipher:hover {
     opacity: 0.5;
 }
+
+img.rot:hover {
+    animation: 0.5s linear 0s normal none infinite running rot;
+    animation-iteration-count: 0.5;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

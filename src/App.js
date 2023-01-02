@@ -171,6 +171,9 @@ function Main() {
   }
 
   const clearCipher = () => {
+    setCipher(null);
+    setMainBlock(false);
+
     setA('');
     setB('');
     setC('');
@@ -202,9 +205,6 @@ function Main() {
     setComma('');
     setQuestion('');
     setExcMark('');
-
-    setCipher(null);
-    setMainBlock(false);
   }
 
   return (
@@ -279,7 +279,7 @@ function Main() {
           </tr>
         </tbody>
       </table>
-      <img src={closeIMG} alt='close' className='clearCipher' onClick={clearCipher}></img>
+      <img src={closeIMG} alt='close' className='clearCipher rot' onClick={clearCipher}></img>
       <button type='button' className='button button1 generateButton' onClick={generate}>Generate cipher</button>
       <button type='button' className='button button1 caesarCipher' onClick={putCaesarCipher}>Put Caesar cipher</button>
       <button type='button' className='button button1 randomCipher' onClick={putRandomCipher}>Put random cipher</button>
@@ -290,8 +290,8 @@ function Main() {
           <button type='button' className='button button1 translateButton2' onClick={translateFrom}>Decrypt</button>
           <button type='button' className='button button2 clearInputs' onClick={clearInputs}>Clear</button>
         </div>
-        <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
-        <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
+        <img src={closeIMG} alt='close' className='closeNormalText rot' onClick={() => setNormalText('')}></img>
+        <img src={closeIMG} alt='close' className='closeEncriptedText rot' onClick={() => setEncriptedText('')}></img>
         <img src={copyIMG} alt='copy' className='copyNormalText'></img>
         <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
         <textarea spellCheck='false' value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
