@@ -104,6 +104,7 @@ textarea {
 .show {
     visibility: '';
 }
+
 .hidden {
     visibility: hidden;
 }
@@ -118,8 +119,7 @@ textarea {
 }
 
 .closeNormalText:hover {
-    background-color: rgb(213, 210, 207);
-    border-radius: 5px;
+    opacity: 0.5;
 }
 
 .closeEncriptedText {
@@ -132,8 +132,7 @@ textarea {
 }
 
 .closeEncriptedText:hover {
-    background-color: rgb(213, 210, 207);
-    border-radius: 5px;
+    opacity: 0.5;
 }
 
 .copyNormalText {
@@ -143,6 +142,9 @@ textarea {
     top: 108px;
     left: 1px;
 }
+.copyNormalText:hover {
+    opacity: 0.5;
+}
 
 .copyEncriptedText {
     width: 20px;
@@ -150,6 +152,10 @@ textarea {
     position: absolute;
     top: 108px;
     right: 261px;
+}
+
+.copyEncriptedText:hover {
+    opacity: 0.5;
 }
 
 .caesarCipher {
@@ -196,4 +202,17 @@ textarea {
     width: 100px;
     top: 70px;
     left: 350px;
+}
+
+.clearCipher {
+    width: 11px;
+    height: 11px;
+    padding: 3px;
+    position: absolute;
+    top: 58px;
+    left: 1135px;
+}
+
+.clearCipher:hover {
+    opacity: 0.5;
 }

@@ -8,8 +8,23 @@ import closeIMG from './img/close.png';
 import copyIMG from './img/copyButton.png';
 import { randomCipher } from './functions/randomCipher';
 
+document.addEventListener('click', (event) => {
+  const elem = event.target;
+  if (elem.classList.contains('copyNormalText')) {
+    navigator.clipboard.writeText(document.querySelector('.inputs').firstChild.textContent);
+  }
+})
+
+document.addEventListener('click', (event) => {
+  const elem = event.target;
+  if (elem.classList.contains('copyEncriptedText')) {
+    navigator.clipboard.writeText(elem.nextElementSibling.textContent);
+  }
+});
+
+
 function App() {
-  
+
   return (
     <div className='wrapper'>
       <Nav />
@@ -22,7 +37,7 @@ function App() {
 function Main() {
   const [a, setA] = React.useState('');
   const [b, setB] = React.useState('');
-  const [c,setC] = React.useState('');
+  const [c, setC] = React.useState('');
   const [d, setD] = React.useState('');
   const [e, setE] = React.useState('');
   const [f, setF] = React.useState('');
@@ -55,8 +70,7 @@ function Main() {
   const [cipher, setCipher] = React.useState(null);
   const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
-  const [mainBlock, setMainBlock] = React.useState(false);
-  const [uniqCipher, setUniqCipher] = React.useState('in progress');
+  const [mainBlock, setMainBlock] = React.useState(true);
 
   const generate = () => {
     setCipher({
@@ -108,7 +122,6 @@ function Main() {
 
   const putRandomCipher = () => {
     let randCipher = randomCipher();
-    console.log(randCipher);
     for (let i = 0; i < randCipher.length; i++) {
       setA(randCipher[0]);
       setB(randCipher[1]);
@@ -155,6 +168,43 @@ function Main() {
   const clearInputs = () => {
     setNormalText('');
     setEncriptedText('');
+  }
+
+  const clearCipher = () => {
+    setA('');
+    setB('');
+    setC('');
+    setD('');
+    setE('');
+    setF('');
+    setG('');
+    setH('');
+    setI('');
+    setJ('');
+    setK('');
+    setL('');
+    setM('');
+    setN('');
+    setO('');
+    setP('');
+    setQ('');
+    setR('');
+    setS('');
+    setT('');
+    setU('');
+    setV('');
+    setW('');
+    setX('');
+    setY('');
+    setZ('');
+    setSpace(' ');
+    setDot('');
+    setComma('');
+    setQuestion('');
+    setExcMark('');
+
+    setCipher(null);
+    setMainBlock(false);
   }
 
   return (
@@ -229,15 +279,15 @@ function Main() {
           </tr>
         </tbody>
       </table>
+      <img src={closeIMG} alt='close' className='clearCipher' onClick={clearCipher}></img>
       <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
       <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cipher</button>
       <button type='button' className='randomCipher' onClick={putRandomCipher}>Put random cipher</button>
-      <div>Your uniq cipher: {uniqCipher}</div>
       <div className='inputs'>
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <div className={`mainBlock ${mainBlock ? 'show' : 'hidden'}`}>
-          <button type='button' className='translateButton' onClick={translateTo}>Translate to</button>
-          <button type='button' className='translateButton' onClick={translateFrom}>Translate from</button>
+          <button type='button' className='translateButton' onClick={translateTo}>Encrypt</button>
+          <button type='button' className='translateButton' onClick={translateFrom}>Decrypt</button>
           <button type='button' className='clearInputs' onClick={clearInputs}>Clear</button>
         </div>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
