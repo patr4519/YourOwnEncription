@@ -5,9 +5,11 @@ import { Header } from './elements/Header';
 import { fromCipher } from './functions/fromCipher';
 import { toCipher } from './functions/toCipher';
 import closeIMG from './img/close.png';
-import copyIMG from './img/copyButton.png'
+import copyIMG from './img/copyButton.png';
+import { randomCipher } from './functions/randomCipher';
 
 function App() {
+  
   return (
     <div className='wrapper'>
       <Nav />
@@ -20,7 +22,7 @@ function App() {
 function Main() {
   const [a, setA] = React.useState('');
   const [b, setB] = React.useState('');
-  const [c, setC] = React.useState('');
+  const [c,setC] = React.useState('');
   const [d, setD] = React.useState('');
   const [e, setE] = React.useState('');
   const [f, setF] = React.useState('');
@@ -54,6 +56,7 @@ function Main() {
   const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
   const [mainBlock, setMainBlock] = React.useState(false);
+  const [uniqCipher, setUniqCipher] = React.useState('in progress');
 
   const generate = () => {
     setCipher({
@@ -103,6 +106,44 @@ function Main() {
     });
   }
 
+  const putRandomCipher = () => {
+    let randCipher = randomCipher();
+    console.log(randCipher);
+    for (let i = 0; i < randCipher.length; i++) {
+      setA(randCipher[0]);
+      setB(randCipher[1]);
+      setC(randCipher[2]);
+      setD(randCipher[3]);
+      setE(randCipher[4]);
+      setF(randCipher[5]);
+      setG(randCipher[6]);
+      setH(randCipher[7]);
+      setI(randCipher[8]);
+      setJ(randCipher[9]);
+      setK(randCipher[10]);
+      setL(randCipher[11]);
+      setM(randCipher[12]);
+      setN(randCipher[13]);
+      setO(randCipher[14]);
+      setP(randCipher[15]);
+      setQ(randCipher[16]);
+      setR(randCipher[17]);
+      setS(randCipher[18]);
+      setT(randCipher[19]);
+      setU(randCipher[20]);
+      setV(randCipher[21]);
+      setW(randCipher[22]);
+      setX(randCipher[23]);
+      setY(randCipher[24]);
+      setZ(randCipher[25]);
+      setSpace(randCipher[26]);
+      setDot(randCipher[27]);
+      setComma(randCipher[28]);
+      setQuestion(randCipher[29]);
+      setExcMark(randCipher[30]);
+    }
+  }
+
   const translateTo = () => {
     setEncriptedText(toCipher(cipher, normalText))
   }
@@ -115,10 +156,6 @@ function Main() {
     setNormalText('');
     setEncriptedText('');
   }
-
-  // const copyNormalText = () => {
-    
-  // }
 
   return (
     <div className='main'>
@@ -193,7 +230,9 @@ function Main() {
         </tbody>
       </table>
       <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
-      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cypher</button>
+      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cipher</button>
+      <button type='button' className='randomCipher' onClick={putRandomCipher}>Put random cipher</button>
+      <div>Your uniq cipher: {uniqCipher}</div>
       <div className='inputs'>
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <div className={`mainBlock ${mainBlock ? 'show' : 'hidden'}`}>

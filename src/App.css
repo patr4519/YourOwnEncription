@@ -153,7 +153,11 @@ textarea {
 }
 
 .caesarCipher {
-    margin-left: 340px;
+    margin-left: 220px;
+}
+
+.randomCipher {
+    margin-left: 10px;
 }
 
 .translateButton {
