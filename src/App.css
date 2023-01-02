@@ -89,16 +89,17 @@ textarea {
 }
 
 .yourText {
-    width: 35%;
+    width: 45%;
     position: relative;
 }
 
 .encriptedText {
-    width: 35%;
+    width: 45%;
 }
 
 .mainBlock {
-    width: 30%;
+    width: 10%;
+    position: relative;
 }
 
 .show {
@@ -115,7 +116,7 @@ textarea {
     padding: 3px;
     position: absolute;
     top: 110px;
-    left: 262px;
+    left: 340px;
 }
 
 .closeNormalText:hover {
@@ -128,7 +129,7 @@ textarea {
     padding: 3px;
     position: absolute;
     top: 110px;
-    right: 5px;
+    right: 4px;
 }
 
 .closeEncriptedText:hover {
@@ -142,6 +143,7 @@ textarea {
     top: 108px;
     left: 1px;
 }
+
 .copyNormalText:hover {
     opacity: 0.5;
 }
@@ -151,7 +153,7 @@ textarea {
     height: 20px;
     position: absolute;
     top: 108px;
-    right: 261px;
+    right: 339px;
 }
 
 .copyEncriptedText:hover {
@@ -166,13 +168,28 @@ textarea {
     margin-left: 10px;
 }
 
-.translateButton {
+.translateButton1 {
     width: 100px;
     height: -moz-fit-content;
     height: fit-content;
     margin-top: 30px;
     padding: 5px;
     margin-left: 11px;
+    position: absolute;
+    top: 108px;
+    right: 214px;
+}
+
+.translateButton2 {
+    width: 100px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 30px;
+    padding: 5px;
+    margin-left: 11px;
+    position: absolute;
+    top: 108px;
+    right: -233px;
 }
 
 .subTitle {
@@ -182,7 +199,7 @@ textarea {
 .pNormal {
     position: absolute;
     top: -27px;
-    left: 107px;
+    left: 136px;
     font-size: 12px;
     font-style: italic;
     color: grey;
@@ -191,7 +208,7 @@ textarea {
 .pEncripted {
     position: absolute;
     top: -27px;
-    right: 107px;
+    right: 127px;
     font-size: 12px;
     font-style: italic;
     color: grey;
@@ -199,9 +216,11 @@ textarea {
 
 .clearInputs {
     position: absolute;
-    width: 100px;
-    top: 70px;
-    left: 350px;
+    top: 36px;
+    width: 68px;
+    left: 5px;
+    border-radius: 141px;
+    padding: 18px;
 }
 
 .clearCipher {

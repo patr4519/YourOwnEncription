@@ -70,7 +70,7 @@ function Main() {
   const [cipher, setCipher] = React.useState(null);
   const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
-  const [mainBlock, setMainBlock] = React.useState(true);
+  const [mainBlock, setMainBlock] = React.useState(false);
 
   const generate = () => {
     setCipher({
@@ -286,8 +286,8 @@ function Main() {
       <div className='inputs'>
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <div className={`mainBlock ${mainBlock ? 'show' : 'hidden'}`}>
-          <button type='button' className='translateButton' onClick={translateTo}>Encrypt</button>
-          <button type='button' className='translateButton' onClick={translateFrom}>Decrypt</button>
+          <button type='button' className='translateButton1' onClick={translateTo}>Encrypt</button>
+          <button type='button' className='translateButton2' onClick={translateFrom}>Decrypt</button>
           <button type='button' className='clearInputs' onClick={clearInputs}>Clear</button>
         </div>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
