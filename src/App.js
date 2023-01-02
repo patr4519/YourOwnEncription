@@ -209,7 +209,7 @@ function Main() {
 
   return (
     <div className='main'>
-      <table>
+      <table className='mainTable'>
         <tbody>
           <tr>
             <th>A</th>
@@ -280,21 +280,21 @@ function Main() {
         </tbody>
       </table>
       <img src={closeIMG} alt='close' className='clearCipher' onClick={clearCipher}></img>
-      <button type='button' className='generateButton' onClick={generate}>Generate cipher</button>
-      <button type='button' className='caesarCipher' onClick={putCaesarCipher}>Put Caesar cipher</button>
-      <button type='button' className='randomCipher' onClick={putRandomCipher}>Put random cipher</button>
+      <button type='button' className='button button1 generateButton' onClick={generate}>Generate cipher</button>
+      <button type='button' className='button button1 caesarCipher' onClick={putCaesarCipher}>Put Caesar cipher</button>
+      <button type='button' className='button button1 randomCipher' onClick={putRandomCipher}>Put random cipher</button>
       <div className='inputs'>
         <textarea value={normalText} className='yourText' onChange={(e) => setNormalText(e.target.value)}></textarea>
         <div className={`mainBlock ${mainBlock ? 'show' : 'hidden'}`}>
-          <button type='button' className='translateButton1' onClick={translateTo}>Encrypt</button>
-          <button type='button' className='translateButton2' onClick={translateFrom}>Decrypt</button>
-          <button type='button' className='clearInputs' onClick={clearInputs}>Clear</button>
+          <button type='button' className='button button1 translateButton1' onClick={translateTo}>Encrypt</button>
+          <button type='button' className='button button1 translateButton2' onClick={translateFrom}>Decrypt</button>
+          <button type='button' className='button button2 clearInputs' onClick={clearInputs}>Clear</button>
         </div>
         <img src={closeIMG} alt='close' className='closeNormalText' onClick={() => setNormalText('')}></img>
         <img src={closeIMG} alt='close' className='closeEncriptedText' onClick={() => setEncriptedText('')}></img>
         <img src={copyIMG} alt='copy' className='copyNormalText'></img>
         <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
-        <textarea spellcheck='false' value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
+        <textarea spellCheck='false' value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
         <p className='pNormal'>Normal text</p>
         <p className='pEncripted'>Encripted text</p>
       </div>

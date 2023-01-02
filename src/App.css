@@ -63,17 +63,39 @@ td {
     text-align: center;
 }
 
-table {
-    width: 70%;
-}
-
 .inputChar {
     width: 20px;
     text-align: center;
 }
 
+.button {
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #c83825;
+    color: white;
+}
+
 .generateButton {
-    margin-left: 550px;
+    margin-left: 535px;
 }
 
 textarea {
@@ -141,7 +163,7 @@ textarea {
     height: 20px;
     position: absolute;
     top: 108px;
-    left: 1px;
+    left: 2px;
 }
 
 .copyNormalText:hover {
@@ -161,7 +183,7 @@ textarea {
 }
 
 .caesarCipher {
-    margin-left: 220px;
+    margin-left: 170px;
 }
 
 .randomCipher {
@@ -228,8 +250,8 @@ textarea {
     height: 11px;
     padding: 3px;
     position: absolute;
-    top: 58px;
-    left: 1135px;
+    top: 56px;
+    left: 1117px;
 }
 
 .clearCipher:hover {
