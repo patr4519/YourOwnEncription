@@ -296,7 +296,7 @@ function Main() {
         <img src={copyIMG} alt='copy' className='copyEncriptedText'></img>
         <textarea spellCheck='false' value={encriptedText} className='encriptedText' onChange={(e) => setEncriptedText(e.target.value)}></textarea>
         <p className='pNormal'>Normal text</p>
-        <p className='pEncripted'>Encripted text</p>
+        <p className='pEncripted'>Encrypted text</p>
       </div>
     </div>
   );
