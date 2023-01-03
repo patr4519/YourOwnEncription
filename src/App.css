@@ -79,7 +79,8 @@ td {
 }
 
 .button1 {
-    background-color: white;
+    /* background-color: white; */
+    background: linear-gradient(#2a5a5ab1, rgb(238, 234, 234));
     color: black;
     border: 2px solid #4CAF50;
 }
@@ -238,12 +239,12 @@ textarea {
 
 .clearInputs {
     position: absolute;
-    top: 36px;
+    top: 48px;
     width: 68px;
     left: 5px;
-    border-radius: 141px;
-    padding: 18px;
-    border: 2px solid #914444;
+    border-radius: 124px;
+    border: 1px solid #914444;
+    background: radial-gradient(rgba(216, 204, 204, 0.489), rgba(208, 14, 14, 0.632));
 }
 
 .clearCipher {
@@ -275,7 +276,8 @@ img.rot:hover {
 }
 
 .instructions {
-    padding: 10px;
+    padding: 15px;
+    padding-top: 0px;
     margin-left: 80px;
     line-height: 50%;
 }
@@ -284,6 +286,7 @@ img.rot:hover {
     font-size: 13px;
     text-align: left;
 }
+
 .line1 {
     line-height: 100%;
 }

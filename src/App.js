@@ -245,37 +245,37 @@ function Main() {
             <th>!</th>
           </tr>
           <tr>
-            <td><input value={a} className='inputChar' onChange={(event) => setA(event.target.value)} /></td>
-            <td><input value={b} className='inputChar' onChange={(event) => setB(event.target.value)} /></td>
-            <td><input value={c} className='inputChar' onChange={(event) => setC(event.target.value)} /></td>
-            <td><input value={d} className='inputChar' onChange={(event) => setD(event.target.value)} /></td>
-            <td><input value={e} className='inputChar' onChange={(event) => setE(event.target.value)} /></td>
-            <td><input value={f} className='inputChar' onChange={(event) => setF(event.target.value)} /></td>
-            <td><input value={g} className='inputChar' onChange={(event) => setG(event.target.value)} /></td>
-            <td><input value={h} className='inputChar' onChange={(event) => setH(event.target.value)} /></td>
-            <td><input value={i} className='inputChar' onChange={(event) => setI(event.target.value)} /></td>
-            <td><input value={j} className='inputChar' onChange={(event) => setJ(event.target.value)} /></td>
-            <td><input value={k} className='inputChar' onChange={(event) => setK(event.target.value)} /></td>
-            <td><input value={l} className='inputChar' onChange={(event) => setL(event.target.value)} /></td>
-            <td><input value={m} className='inputChar' onChange={(event) => setM(event.target.value)} /></td>
-            <td><input value={n} className='inputChar' onChange={(event) => setN(event.target.value)} /></td>
-            <td><input value={o} className='inputChar' onChange={(event) => setO(event.target.value)} /></td>
-            <td><input value={p} className='inputChar' onChange={(event) => setP(event.target.value)} /></td>
-            <td><input value={q} className='inputChar' onChange={(event) => setQ(event.target.value)} /></td>
-            <td><input value={r} className='inputChar' onChange={(event) => setR(event.target.value)} /></td>
-            <td><input value={s} className='inputChar' onChange={(event) => setS(event.target.value)} /></td>
-            <td><input value={t} className='inputChar' onChange={(event) => setT(event.target.value)} /></td>
-            <td><input value={u} className='inputChar' onChange={(event) => setU(event.target.value)} /></td>
-            <td><input value={v} className='inputChar' onChange={(event) => setV(event.target.value)} /></td>
-            <td><input value={w} className='inputChar' onChange={(event) => setW(event.target.value)} /></td>
-            <td><input value={x} className='inputChar' onChange={(event) => setX(event.target.value)} /></td>
-            <td><input value={y} className='inputChar' onChange={(event) => setY(event.target.value)} /></td>
-            <td><input value={z} className='inputChar' onChange={(event) => setZ(event.target.value)} /></td>
-            <td><input value={space} className='inputChar' onChange={(event) => setSpace(event.target.value)} /></td>
-            <td><input value={dot} className='inputChar' onChange={(event) => setDot(event.target.value)} /></td>
-            <td><input value={comma} className='inputChar' onChange={(event) => setComma(event.target.value)} /></td>
-            <td><input value={question} className='inputChar' onChange={(event) => setQuestion(event.target.value)} /></td>
-            <td><input value={excMark} className='inputChar' onChange={(event) => setExcMark(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={a} className='inputChar' onChange={(event) => setA(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={b} className='inputChar' onChange={(event) => setB(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={c} className='inputChar' onChange={(event) => setC(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={d} className='inputChar' onChange={(event) => setD(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={e} className='inputChar' onChange={(event) => setE(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={f} className='inputChar' onChange={(event) => setF(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={g} className='inputChar' onChange={(event) => setG(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={h} className='inputChar' onChange={(event) => setH(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={i} className='inputChar' onChange={(event) => setI(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={j} className='inputChar' onChange={(event) => setJ(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={k} className='inputChar' onChange={(event) => setK(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={l} className='inputChar' onChange={(event) => setL(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={m} className='inputChar' onChange={(event) => setM(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={n} className='inputChar' onChange={(event) => setN(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={p} className='inputChar' onChange={(event) => setP(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={o} className='inputChar' onChange={(event) => setO(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={q} className='inputChar' onChange={(event) => setQ(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={r} className='inputChar' onChange={(event) => setR(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={s} className='inputChar' onChange={(event) => setS(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={t} className='inputChar' onChange={(event) => setT(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={u} className='inputChar' onChange={(event) => setU(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={v} className='inputChar' onChange={(event) => setV(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={w} className='inputChar' onChange={(event) => setW(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={x} className='inputChar' onChange={(event) => setX(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={y} className='inputChar' onChange={(event) => setY(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={z} className='inputChar' onChange={(event) => setZ(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={space} className='inputChar' onChange={(event) => setSpace(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={dot} className='inputChar' onChange={(event) => setDot(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={comma} className='inputChar' onChange={(event) => setComma(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={question} className='inputChar' onChange={(event) => setQuestion(event.target.value)} /></td>
+            <td><input maxLength="1" type='text' value={excMark} className='inputChar' onChange={(event) => setExcMark(event.target.value)} /></td>
           </tr>
         </tbody>
       </table>
