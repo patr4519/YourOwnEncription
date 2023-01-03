@@ -290,3 +290,9 @@ img.rot:hover {
 .line1 {
     line-height: 100%;
 }
+
+.uniqKey {
+    position: absolute;
+    top: 357px;
+    right: 377px;
+}

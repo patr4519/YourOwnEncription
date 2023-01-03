@@ -71,6 +71,17 @@ function Main() {
   const [normalText, setNormalText] = React.useState('');
   const [encriptedText, setEncriptedText] = React.useState('');
   const [mainBlock, setMainBlock] = React.useState(false);
+  const [uniqKey, setUniqKey] = React.useState(null);
+
+  React.useEffect(() => {
+    if (cipher !== null) {
+      let str = '';
+      for (let x of Object.values(cipher)) {
+        str += x;
+      }
+      setUniqKey(str);
+    }
+  }, [cipher])
 
   const generate = () => {
     setCipher({
@@ -173,6 +184,7 @@ function Main() {
   const clearCipher = () => {
     setCipher(null);
     setMainBlock(false);
+    setUniqKey(null);
 
     setA('');
     setB('');
@@ -298,6 +310,7 @@ function Main() {
         <p className='pNormal'>Normal text</p>
         <p className='pEncripted'>Encrypted text</p>
       </div>
+      {uniqKey && <div className='uniqKey'>Your uniq key: {uniqKey}</div>}
     </div>
   );
 }
