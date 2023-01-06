@@ -22,7 +22,6 @@ document.addEventListener('click', (event) => {
   }
 });
 
-
 function App() {
 
   return (
